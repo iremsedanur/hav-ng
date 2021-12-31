@@ -1,0 +1,13 @@
+SELECT * FROM film
+GROUP BY rating;
+
+SELECT replacement_cost, SUM (*) FROM film
+GROUP BY replacement_cost 
+HAVING SUM(*);
+
+SELECT store_id, customer_id, SUM(customer_id) FROM payment
+
+SELECT city, country_id, SUM(city) FROM city 
+GROUP BY country_id
+HAVING SUM(city) DESC
+LIMIT 1;
